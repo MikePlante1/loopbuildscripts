@@ -95,13 +95,13 @@ if [ "$WHICH" = "Loop" ]; then
     echo -e "Please select which version of Loop you would like to download and build.\n"
     echo -e "\n ${RED}${BOLD}You are running the script for the released version${NC}\n"
     echo -e "  These webpages will tell you the date of the last release for:"
-    echo -e "  Loop:    https://github.com/MikePlante1/Loop/releases"
+    echo -e "  Loop:    https://github.com/loopnlearn/LoopWorkspace/releases"
     echo -e "  FreeAPS: https://github.com/loopnlearn/LoopWorkspace/releases"
     if [ ${SCRIPT_BRANCH} == 'dev' ]; then
         echo -e "\n ${RED}${BOLD}This is the dev branch of BuildLoop.sh,"
         echo -e "used for testing just prior to release of development branches."
         echo -e "You will, in fact, get most recent version of development branch.${NC}\n"
-        BRANCH_LOOP=dev
+        BRANCH_LOOP=test-this
         BRANCH_FREE=freeaps_dev
     else
         BRANCH_LOOP=main
@@ -116,7 +116,7 @@ if [ "$WHICH" = "Loop" ]; then
         case $opt in
             "Loop")
                 FORK_NAME=Loop
-                REPO=https://github.com/MikePlante1/LoopWorkspace
+                REPO=https://github.com/loopnlearn/LoopWorkspace
                 BRANCH=$BRANCH_LOOP
                 break
                 ;;
